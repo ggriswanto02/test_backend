@@ -1,6 +1,7 @@
 import express from "express";
 import authRoutes from "./authV1/auth.routes";
 import productRoutes from "./productV1/product.routes";
+import summaryRoutes from "./summaryV1/summary.routes";
 
 const app = express();
 app.use(express.json());
@@ -11,6 +12,7 @@ app.get("/health", (_req, res) => {
 
 app.use("/api/auth/v1", authRoutes);
 app.use("/api/products/v1", productRoutes);
+app.use("/api/summary/v1", summaryRoutes);
 
 const PORT = 3000;
 app.listen(PORT, () => {
