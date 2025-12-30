@@ -31,7 +31,7 @@ export async function loginUser(email: string, password: string) {
   const token = jwt.sign(
     { id: user.id, role: user.role },
     JWT_SECRET,
-    { expiresIn: "3Hours" }
+    { expiresIn: "6Hours" }
   );
 
   return { token };
